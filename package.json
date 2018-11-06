@@ -1,0 +1,26 @@
+{
+  "name": "manual_generation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndrewRest/manual_generation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndrewRest/manual_generation/issues"
+  },
+  "homepage": "https://github.com/AndrewRest/manual_generation#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "html-pdf": "2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.6"
+  }
+}

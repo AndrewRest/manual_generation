@@ -1,0 +1,13 @@
+{
+  "border": {
+    "top": "2px",
+    "right": "80px",
+    "bottom": "2px",
+    "left": "80px"
+  },
+  "format": "letter",
+  "directory": "/pdf",
+  "type": "png",
+  "quality": "75",
+  "base":"file:///home/www/src/images/"
+}
