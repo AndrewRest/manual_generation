@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/AndrewRest/manual_generation#readme",
   "dependencies": {
-    "html-pdf": "2.2.0"
+    "html-pdf": "2.2.0",
+    "npm": "^6.4.1"
   },
   "devDependencies": {
     "nodemon": "^1.18.6"

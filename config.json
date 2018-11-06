@@ -5,9 +5,9 @@
     "bottom": "2px",
     "left": "80px"
   },
-  "format": "letter",
+  "format": "A4",
   "directory": "/pdf",
-  "type": "png",
-  "quality": "75",
-  "base":"file:///home/www/src/images/"
+  "type": "pdf",
+  "quality": "100",
+  "base":"file:///D:/temp/manual_generation/src"
 }
