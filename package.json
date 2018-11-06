@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/AndrewRest/manual_generation#readme",
   "dependencies": {
-    "express": "^4.16.4",
     "html-pdf": "2.2.0"
   },
   "devDependencies": {
