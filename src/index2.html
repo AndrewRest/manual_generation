@@ -1,0 +1,33 @@
+<html> 
+<head> 
+    <script> 
+        var WIN = "win";
+        var OSX = "osx";
+        function pageLoaded() { 
+            var qAt = document.URL.indexOf("?"); 
+            var param = document.URL.substr(qAt+1);
+            var listOfElementsToHide;
+            if(param.toLowerCase() == WIN) {
+                listOfElementsToHide = document.getElementsByClassName(OSX);
+            }
+            if(param.toLowerCase() == OSX) {
+            	listOfElementsToHide = document.getElementsByClassName(WIN);
+            }
+            if(listOfElementsToHide) {
+            	for (var i = 0; i < listOfElementsToHide.length; i++) {
+    				listOfElementsToHide[i].style.display = "none"; 
+				}
+            }
+        } 
+    </script> 
+</head> 
+<body onload="pageLoaded()"> 
+	<p class="win">
+		<b>Windows</b> test text
+	</p>
+	<p class="osx">
+		<b>OSX</b> test text
+	</p>
+	Common text for both platforms.
+</body> 
+</html>
