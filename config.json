@@ -9,5 +9,5 @@
   "directory": "/pdf",
   "type": "pdf",
   "quality": "100",
-  "base":"file:///D:/temp/manual_generation/src"
+  "base":"file:///D:/1/manual_generation/src"
 }
