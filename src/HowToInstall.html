@@ -3,8 +3,8 @@
     <link rel="stylesheet" type="text/css" href="main.css"/>
     <link rel="stylesheet" type="text/css" href="{{additional_css}}"/>
     <script>
-        var WIN = "win";
-        var OSX = "osx";
+        const WIN = "win";
+        const OSX = "osx";
         function pageLoaded() {
             var qAt = document.URL.indexOf("?");
             var param = document.URL.substr(qAt+1);
@@ -24,7 +24,7 @@
     </script>
 </head>
 <body onload="pageLoaded()">
-<img src="images/AfterCodecs.png">
+<img src="images/AfterCodecs.png" width="700">
 	<!--<p class="win">-->
 		<!--<b>Windows</b> test text-->
 	<!--</p>-->
@@ -64,7 +64,7 @@ Whole installation steps :
 		license" button. On PP / ME you need to export or convert something and choose
 		"AfterCodecs" in the codec list and there is a button "AfterCodecs Settings" in the
 		options.
-		<img src="images/ios_example.png">
+		<img src="images/ios_example.png" width="700">
 	</li>
 	<li>In the same tab you now have to download ffmpeg binaries, just press the "Download /
 		Update" button and wait for the download to finish. It will create this folder :
@@ -76,14 +76,14 @@ Whole installation steps :
 		on your own. This should look like this at the end (with Autokroma, not Dornisoft) :
 
 		<p class="win">
-			<img src="images/win1.png">
+			<img src="images/win1.png" width="700">
 			<br>
-			<img src="images/win2.png">
+			<img src="images/win2.png" width="700">
 		</p>
 		<p class="osx">
-			<img src="images/mac.png" >
+			<img src="images/mac.png" width="700" >
 			<br>
-			<img src="images/mac2.png">
+			<img src="images/mac2.png" width="700">
 		</p>
 
 		Please not that there's always a minimal version of ffmpeg / ffkroma needed to run

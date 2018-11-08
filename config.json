@@ -1,9 +1,9 @@
 {
   "border": {
     "top": "2px",
-    "right": "80px",
+    "right": "60px",
     "bottom": "2px",
-    "left": "80px"
+    "left": "60px"
   },
   "format": "A4",
   "directory": "/pdf",
