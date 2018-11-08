@@ -2,9 +2,12 @@ const pdf = require('html-pdf');
 const fs = require('fs');
 const html = fs.readFileSync('./src/HowToInstall.html', 'utf8');
 const options = require('./config');
+const argv = require('minimist')(process.argv.slice(2));
+
 const ADDITIONAL_CSS_PLACEHOLDER = '{{additional_css}}';
 const STATIC_FILE_PATH = 'file:///' + __dirname.replace(/\\/g,'/') + '/src/';
-const argv = require('minimist')(process.argv.slice(2));
+
+options.base = STATIC_FILE_PATH;
 
 console.log('Create html for Windows...');
 const winHtml = html.replace(ADDITIONAL_CSS_PLACEHOLDER, STATIC_FILE_PATH + 'win.css');
