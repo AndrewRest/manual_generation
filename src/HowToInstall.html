@@ -1,12 +1,12 @@
-<html> 
+<html>
 <head>
     <link rel="stylesheet" type="text/css" href="main.css"/>
     <link rel="stylesheet" type="text/css" href="{{additional_css}}"/>
-    <script> 
+    <script>
         var WIN = "win";
         var OSX = "osx";
-        function pageLoaded() { 
-            var qAt = document.URL.indexOf("?"); 
+        function pageLoaded() {
+            var qAt = document.URL.indexOf("?");
             var param = document.URL.substr(qAt+1);
             var listOfElementsToHide;
             if(param.toLowerCase() == WIN) {
@@ -17,19 +17,109 @@
             }
             if(listOfElementsToHide) {
             	for (var i = 0; i < listOfElementsToHide.length; i++) {
-    				listOfElementsToHide[i].style.display = "none"; 
+    				listOfElementsToHide[i].style.display = "none";
 				}
             }
-        } 
-    </script> 
-</head> 
-<body onload="pageLoaded()"> 
-	<p class="win">
-		<b>Windows</b> test text
-	</p>
-	<p class="osx">
-		<b>OSX</b> test text
-	</p>
+        }
+    </script>
+</head>
+<body onload="pageLoaded()">
+<img src="images/AfterCodecs.png">
+	<!--<p class="win">-->
+		<!--<b>Windows</b> test text-->
+	<!--</p>-->
+	<!--<p class="osx">-->
+		<!--<b>OSX</b> test text-->
+	<!--</p>-->
+<br>
+<b> AfterCodecs is a new native exporter for Adobe After Effects, Premiere Pro and Media
+	Encoder</b> CC 2015+ on Windows 7+ and Mac OS X 10.10+, bringing you ProRes, H264, H265 &
+Hap codecs for excellent quality and lightweight videos.
    Common text for both platforms.
-</body> 
+
+<h1> Installation</h1>
+You can <b>skip step 1 and 3 on Windows with the given setup and skip step 1 on OSX with the
+setup package. </b>
+You can also skip the two first steps by using the aescripts + aeplugins manager application.
+
+Whole installation steps :
+<ol>
+	<li>On Windows/OSX copy the .aex / .plugin (AE) and .prm / .bundle (PP/ME) into the Plugins
+		folder of you host installation directory, for example :
+		<p class="win">
+		(Windows) C:\Program Files\Adobe\Adobe After Effects CC 2017\Support
+		Files\Plug-ins
+		</p>
+		<p class="osx">
+		(OSX) /Applications/Adobe After Effects CC 2017/Plug-ins
+		</p>
+		<b>If you have multiple versions or mutiple hosts installed you can also put it in the
+			common folder : </b>
+		<p class="win">(Windows) C:\Program Files\Adobe\Common\Plug-ins\7.0\MediaCore</p>
+		<p class="osx">(OSX) /Library/Application
+			Support/Adobe/Common/Plug-ins/7.0/MediaCore/</p></li>
+	<li>Now you have to license the plugins, please open it up by trying to export something, on
+		AE : choose "AfterCodecs .mov" then press the "Format Options" button to open up
+		AfterCodecs' dialog. Go to the "Settings" tab, enter you license and press the "Activate
+		license" button. On PP / ME you need to export or convert something and choose
+		"AfterCodecs" in the codec list and there is a button "AfterCodecs Settings" in the
+		options.
+		<img src="images/ios_example.png">
+	</li>
+	<li>In the same tab you now have to download ffmpeg binaries, just press the "Download /
+		Update" button and wait for the download to finish. It will create this folder :
+		<p class="win">(Windows) %appdata%/Autokroma/ffmpeg </p>
+		<p class="osx">(OSX) ~/Library/Application Support/Autokroma/ffmpeg </p>
+		and extract ffmpeg, ffkroma binaries into it. You can also do this manually (if you
+		encountered the "invalid zip file" error) by downloading the zip at the bottom of this
+		page http://aescripts.com/aftercodecs/ and extracting the files and creating the folder
+		on your own. This should look like this at the end (with Autokroma, not Dornisoft) :
+
+		<p class="win">
+			<img src="images/win1.png">
+			<br>
+			<img src="images/win2.png">
+		</p>
+		<p class="osx">
+			<img src="images/mac.png" >
+			<br>
+			<img src="images/mac2.png">
+		</p>
+
+		Please not that there's always a minimal version of ffmpeg / ffkroma needed to run
+		AfterCodecs ! <b>If you see a red message, please update.</b>
+	</li>
+	<br>
+	<br>
+	<h1>How AfterCodecs works</h1>
+	AfterCodecs sends your data into ffmpeg in order to encode it. The logging feature enables
+	power users to read AfterCodecs' and ffmpeg's output logs. On AE : If you have both video and
+	audio, temporary files will be written (suffixed .video.mov and .audio.wav) and there is an
+	additional muxing step at the end of the render (a progressbar will pop up on Windows).
+	Please bear in mind that After Effects will prevent you from overwriting the final output file,
+	but not temporary ones. You can even stop the render at any time and the rendered files will
+	be fine, storing what has been currently rendered. On PPro / AME : If you have audio, a
+	temporary WAV file will be written (suffixed .audio.wav). Please bear in mind that AfterCodecs
+	will not prevent you from overwriting temporary files.
+
+	<h1>PP /ME : Extensions : MP4, MOV (QuickTime), EXT</h1>
+	Select the EXT extension to save up time if you are doing huge renders (multi gigabytes) or if
+	you want to remove the "File already exists. Do you want to replace it." confirmation popup.
+	This option is not compatible with having post render actions such as automatic uploading to
+	the web. The reason this option exists is that on huge files, PP and ME will spend multiple
+	minutes to parse the file (make the test to see if it's an issue for you !)
+
+	<h1>PP /ME : Match Source + Preset</h1>
+	Don't forget to press the "Match Source" button in order to conform Resolution, Framerate
+	and Pixel Aspect Ratio to the source (the button will automatically tick the checkboxes at the
+	right). If you record any preset also press the Match Source button before so that you are sure
+	you are not saving thoses parameters in the preset.
+	<h1>Feedback</h1>
+	For any issue please contact us on aescripts + aeplugins by opening up a ticket and provide a
+	logging file and precising AE or Ppr / AME http://aescripts.com/contact/?
+	direct=1&SKU=DSTAC-SUL .
+
+	<h2><b>Thank you for purchasing and using AfterCodecs !</b></h2>
+</ol>
+</body>
 </html>
